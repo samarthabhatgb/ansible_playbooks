@@ -1,0 +1,9 @@
+---
+- name: This playbook installs packages
+  hosts: webservers
+  become: true
+  tasks:
+  - name: Installing packages
+    yum:
+      name: ['git', 'httpd', 'which', 'tree', 'wget', 'mysql', 'docker', 'which']
+      state: installed

@@ -1,0 +1,7 @@
+---
+- name: This playbook installs webserver
+  hosts: webservers
+  become: true
+
+  roles:
+  - setup-apache-role

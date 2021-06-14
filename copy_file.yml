@@ -1,0 +1,12 @@
+---
+- name: This is Sam's playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: Copy a file
+    copy:
+      src: /home/ansadmin/index.html
+      dest: /home/ansadmin
+      owner: hari
+      mode: 0600
+
